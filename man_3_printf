@@ -1,0 +1,88 @@
+.TH _PRINTF 3 "29 October 2019" "0.32" "_printf function"
+.SH NAME
+.B holberton
+_printf - formatting output printf function
+.SH SYNOPSIS
+.BI _printf(const char  *format, ...)
+.PP
+.B #include "holberton.h"
+.PP
+.B #include <stdarg.h>
+.PP
+.B #include <stdlib.h>
+.PP
+.B #include <unistd.h>
+.PP
+.B #include <stdio.h>
+.PP
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+_printf is a function that produces output according to a format.
+When printf processes its arguments, it starts printing the characters it finds in the first argument, one by one. When it finds a percent it knows it has a format specification. It goes to the next argument and uses its value, printing it according to that format specification. It then returns to printing a character at a time (from the first argument).
+.PP
+.B Return value
+.PP
+_printf returns: the number of characters printed (excluding the null byte used to end output to strings)
+write output to stdout, the standard output stream.
+.PP
+.B Format Specifications
+.PP
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+
+.RS 3.5i
+.PP
+.I %c
+.B \-
+print a single character
+.PP
+.I %d
+.B \-
+print a floating-point number
+.PP
+.I %i
+.B \-
+print an integer in base 10
+.PP
+.I %o
+.B \-
+print a number in octal (base 8)
+.PP
+.I %s
+.B \-
+print a string of characters
+.PP
+.I %u
+.B \-
+print an unsigned decimal (base 10) number
+.PP
+.I %d
+.B \-
+print a floating-point number
+.PP
+.I %x
+.B \-
+print a number in hexidecimal (base 16)
+.RE
+.TP
+.B
+
+.SH Examples
+.PP
+The utility of printf is when we are printing the contents of variables. Let’s take the format specifier %d for example. This prints a number. So, a number must be provided for printing. This is done by adding another argument to the printf statement, as shown here.
+.PP
+.B Input: int age;
+.PP
+.B Input: age = 25;
+.PP
+_printf("I am %d years old\\n\", age);
+.PP
+.B Output: In this example, printf has two arguments. The first is a string: "I am %d years old\n". The second is an integer, age.
+.PP
+.SH SEE ALSO
+.B github
+.PP
+Cocuy: TzStrikerYT
+Urbano: juan-skill
+.PP
+.SH AUTHOR
+Michael Cocoy, Juan Urbano
